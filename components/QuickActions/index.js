@@ -11,6 +11,7 @@ export default function QuickActions({
   onTurnOnAll,
   onTurnOffAll,
   countTurnedOn,
+  lights,
 }) {
   return (
     <StyledQuickActions>
@@ -21,7 +22,11 @@ export default function QuickActions({
       >
         Turn all lights off
       </Button>
-      <Button type="button" disabled={countTurnedOn > 7} onClick={onTurnOnAll}>
+      <Button
+        type="button"
+        disabled={countTurnedOn > lights.length - 1}
+        onClick={onTurnOnAll}
+      >
         Turn all lights on
       </Button>
     </StyledQuickActions>

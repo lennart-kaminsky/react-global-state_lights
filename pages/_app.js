@@ -14,8 +14,6 @@ const initialLights = [
 ];
 
 export default function App({ Component, pageProps }) {
-  //const [isOn, setIsOn] = useState(false);
-
   const [lights, setLights] = useState(initialLights);
 
   function toggleLight(id) {
@@ -35,7 +33,7 @@ export default function App({ Component, pageProps }) {
   }
 
   const countTurnedOn = lights.filter((light) => light.isOn).length;
-  console.log("TEST", countTurnedOn <= 0);
+
   return (
     <Layout isDimmed={countTurnedOn <= 0}>
       <GlobalStyle />

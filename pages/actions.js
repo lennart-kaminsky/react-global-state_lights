@@ -5,6 +5,7 @@ export default function Actions({
   handleTurnOnAll,
   handleTurnOffAll,
   countTurnedOn,
+  lights,
 }) {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Actions({
         onTurnOnAll={handleTurnOnAll}
         onTurnOffAll={handleTurnOffAll}
         countTurnedOn={countTurnedOn}
+        lights={lights}
       />
     </>
   );
